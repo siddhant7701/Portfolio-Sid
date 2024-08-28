@@ -767,7 +767,7 @@ strong {
 
 @media screen and (min-width: 576px) {
     .grid--projects {
-        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
 }
 
