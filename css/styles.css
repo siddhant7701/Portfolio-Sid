@@ -777,7 +777,7 @@ strong {
     padding-top: 1rem;
     padding-bottom: 2rem;
     /* background: linear-gradient(to bottom, #004e7a, #00111f); */
-    background: linear-gradient(to bottom, #004e7a, #00111f);
+    /* background: linear-gradient(to bottom, #004e7a, #00111f); */
     color: var(--font-clr);
     position: relative;
     height: 10%;
