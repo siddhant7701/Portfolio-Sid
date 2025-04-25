@@ -39,11 +39,8 @@ html::-webkit-scrollbar-thumb {
 
 body {
     color: var(--font-clr);
-<<<<<<< HEAD
     background: linear-gradient(to bottom, #004e7a, #00111f);
-=======
     background-color: var(--bg-clr);
->>>>>>> 22dc02b1119e7585b197ec2b279e01db3149d3e5
     font-family: Montserrat, sans-serif;
 }
 
@@ -321,11 +318,7 @@ strong {
 .coral-reef-bg {
     position: relative;
     width: 100%;
-<<<<<<< HEAD
-    /* height: 100%; */
-=======
     height: 100%;
->>>>>>> 22dc02b1119e7585b197ec2b279e01db3149d3e5
     overflow: hidden;
     background: linear-gradient(to bottom, #00aaff, #004d99); /* Base gradient for sea effect */
     background-image: url('../images/4128685.jpg'); /* Replace with your coral reef image path */
@@ -999,8 +992,6 @@ strong {
         transform: translateX(-100%) translateY(0) scaleY(1);
     }
 }
-<<<<<<< HEAD
-/* Project Categories Styling */
 .project-categories {
     display: flex;
     justify-content: center;
@@ -1340,6 +1331,3 @@ strong {
     height: 6rem;
     margin-top: 2rem;
   }
-  
-=======
->>>>>>> 22dc02b1119e7585b197ec2b279e01db3149d3e5
