@@ -1,838 +1,724 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Siddhant Srivastava — Full Stack Web Developer</title>
-  <meta name="description" content="Portfolio of Siddhant Srivastava — full stack web developer building Next.js apps, Shopify stores, custom WordPress sites and PHP/MySQL business software.">
-  <meta name="author" content="Siddhant Srivastava">
-
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Siddhant Srivastava — Full Stack Web Developer">
-  <meta property="og:description" content="Next.js apps, Shopify stores, custom WordPress builds and PHP/MySQL business software.">
-  <meta property="og:image" content="images/profile-pic.jpeg">
-
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2214%22%20fill%3D%22%230234a7%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-size%3D%2212%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3ESID%3C%2Ftext%3E%3C%2Fsvg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio - Sid</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2214%22%20fill%3D%22%230234a7%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-size%3D%2212%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3ESID%3C%2Ftext%3E%3C%2Fsvg%3E">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/enhance.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/night.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- set the saved theme before first paint so there is no flash -->
+  <script>
+    (function () {
+      var saved;
+      try { saved = localStorage.getItem("theme"); } catch (e) {}
+      if (saved === "night") document.documentElement.setAttribute("data-theme", "night");
+    })();
+  </script>
 </head>
 
 <body>
+      <div id="hamburger" class="icon--nav icon--hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
 
-<!-- Top navigation -->
-<nav class="topnav" id="topnav">
-  <a class="topnav__brand" href="#home">
-    <span class="topnav__mark">SID</span>
-    <span>Siddhant Srivastava</span>
-  </a>
-  <div class="topnav__links">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
-  <a class="topnav__cta" href="#contact"><i class="fas fa-paper-plane"></i> Hire me</a>
-</nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" title="Switch to night mode" aria-label="Switch to night mode">
+          <i class="fas fa-moon"></i>
+      </button>
 
-<!-- Hero -->
-<div id="home" class="screen txt--dynamic-lg home-scene">
-  <div class="screen__content zoom-in">
-    <span class="hero__eyebrow"><i class="fas fa-circle-check"></i> Available for freelance work</span>
-    <h1 class="heading--lg">Hi, I'm Siddhant.</h1>
-    <h2 class="heading--md">
-      I build websites that ship.
-      <span class="hero__role">Full Stack Developer · Shopify &amp; WordPress · Next.js</span>
-    </h2>
+      <div id="home" class="screen txt--dynamic-lg home-scene">
+        <div class="screen__content screen__content zoom-in">
+            <h1 class="heading--lg">Hi,</h1>
+            <h2 class="heading--md">I'm Siddhant,</h2>
+            <p class="heading--sm">Welcome To My Portfolio</p>
+        </div>
 
-    <div class="hero__actions">
-      <a class="btn btn--primary" href="#projects"><i class="fas fa-layer-group"></i> View my work</a>
-      <a class="btn btn--ghost" href="#contact"><i class="fas fa-envelope"></i> Get in touch</a>
+        <div class="stars"></div>
+        <div class="sun"></div>
+        <div class="sea">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
     </div>
 
-    <div class="hero__stats">
-      <div class="hero__stat"><b>35+</b><span>Projects shipped</span></div>
-      <div class="hero__stat"><b>11</b><span>Live storefronts</span></div>
-      <div class="hero__stat"><b>4</b><span>Platforms</span></div>
-    </div>
+
+
+<!--About Section-->
+
+<div id="about" class="screen screen--about sea-waves">
+  <div class="content-section">
+    <div id="bio" class="bio">
+
+  <div class="pic-frame animate" data-animation="slide-in">
+    <img src="images/profile-pic.jpeg">
   </div>
 
-  <a class="scroll-cue" href="#about"><span>Scroll</span><i class="fas fa-chevron-down"></i></a>
+  <div class="bio__content txt--dynamic animate" data-animation="zoom-in">
+    <h2 class="heading screen__heading" data-heading="01">About Me</h2>
 
-  <div class="sun"></div>
-  <div class="sea">
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
+    <div class="bio__text">
+      <p>My name is <strong>Siddhant Srivastava</strong>, a freelace web developer.
+      My interests include <strong>Full Stack Web Development</strong>, <strong>Data Science</strong> and <strong>Machine Learning</strong>.
+    </p>
+    <p>I have diverse set of skills, ranging from design, to HTML + CSS + JavaScript, all the way to PhP, MySQL, Python.
+    </p>
   </div>
+  </div>
+
 </div>
 
-<!-- About -->
-<section id="about" class="screen screen--about">
-  <div class="content-section">
-    <div class="bio">
-      <div class="pic-frame animate" data-animation="slide-in">
-        <img src="images/profile-pic.jpeg" alt="Portrait of Siddhant Srivastava">
-      </div>
+<!--Skill Set Section -->
+<div class="grid grid--skills">
+  <h2 class="heading grid__heading screen__heading" data-heading="02">Skill Set</h2>
 
-      <div class="bio__content txt--dynamic animate" data-animation="zoom-in">
-        <h2 class="heading screen__heading" data-heading="01">About Me</h2>
-        <div class="rule"></div>
-        <div class="bio__text">
-          <p>
-            I'm <strong>Siddhant Srivastava</strong>, a freelance web developer. I build
-            production websites and business software end to end — from
-            <strong>Next.js</strong> apps and <strong>Shopify</strong> storefronts to
-            <strong>custom WordPress</strong> themes and <strong>PHP/MySQL</strong> management systems.
-          </p>
-          <p>
-            My work spans design, front end, back end and deployment. Recent projects include a
-            role-based hospital management system, a multi-store ecommerce CMS, an automated
-            website audit tool, and a portfolio of live beverage brand storefronts.
-          </p>
-        </div>
-        <div class="bio__chips">
-          <span>Full Stack Development</span>
-          <span>Shopify</span>
-          <span>WordPress</span>
-          <span>Data Science</span>
-          <span>Machine Learning</span>
-        </div>
-      </div>
-    </div>
+  <!-- Existing Skills (Kept as-is) -->
+<div class="card card--skill animate" data-animation="slide-in" style="--level:70%;">
+  <div class="card--skill__icon">
+    <i class="fab fa-html5" style="color: #FF5722;"></i>
   </div>
-</section>
+  <h3 class="card--skill__heading">HTML/CSS</h3>
+  <div class="card--skill__bar" style="background-color: #FF5722;"></div>
+</div>
 
-<!-- Skills -->
-<section id="skills" class="screen">
-  <div class="content-section">
-    <div class="grid grid--skills">
-      <h2 class="heading grid__heading screen__heading" data-heading="02">Skill Set</h2>
-      <div class="rule"></div>
-
-      <div class="card card--skill animate" data-animation="slide-in" style="--level:85%;">
-        <div class="card--skill__icon"><i class="fab fa-html5" style="color:#FF5722;"></i></div>
-        <h3 class="card--skill__heading">HTML / CSS</h3>
-        <div class="card--skill__bar" style="--primary-clr:#FF5722;--secondary-clr:#ffd0c2;"></div>
-      </div>
-
-      <div class="card card--skill animate" data-animation="slide-in" style="--level:85%;">
-        <div class="card--skill__icon"><i class="fab fa-js" style="color:#f0db4f;"></i></div>
-        <h3 class="card--skill__heading">JavaScript</h3>
-        <div class="card--skill__bar" style="--primary-clr:#f0db4f;--secondary-clr:#fff6c9;"></div>
-      </div>
-
-      <div class="card card--skill animate" data-animation="slide-in" style="--level:80%;">
-        <div class="card--skill__icon"><i class="fab fa-react" style="color:#61DBFB;"></i></div>
-        <h3 class="card--skill__heading">React</h3>
-        <div class="card--skill__bar" style="--primary-clr:#61DBFB;--secondary-clr:#d3f6ff;"></div>
-      </div>
-
-      <div class="card card--skill animate" data-animation="slide-in" style="--level:78%;">
-        <div class="card--skill__icon"><i class="fas fa-layer-group" style="color:#e6edf3;"></i></div>
-        <h3 class="card--skill__heading">Next.js / TypeScript</h3>
-        <div class="card--skill__bar" style="--primary-clr:#e6edf3;--secondary-clr:#9fb4c4;"></div>
-      </div>
-
-      <div class="card card--skill animate" data-animation="slide-in" style="--level:82%;">
-        <div class="card--skill__icon"><i class="fab fa-shopify" style="color:#95BF47;"></i></div>
-        <h3 class="card--skill__heading">Shopify / Liquid</h3>
-        <div class="card--skill__bar" style="--primary-clr:#95BF47;--secondary-clr:#dcf0b8;"></div>
-      </div>
-
-      <div class="card card--skill animate" data-animation="slide-in" style="--level:85%;">
-        <div class="card--skill__icon"><i class="fab fa-wordpress" style="color:#21759B;"></i></div>
-        <h3 class="card--skill__heading">WordPress / WooCommerce</h3>
-        <div class="card--skill__bar" style="--primary-clr:#21759B;--secondary-clr:#8fd0ee;"></div>
-      </div>
-
-      <div class="card card--skill animate" data-animation="slide-in" style="--level:80%;">
-        <div class="card--skill__icon"><i class="fab fa-php" style="color:#777bb4;"></i></div>
-        <h3 class="card--skill__heading">PHP / Laravel</h3>
-        <div class="card--skill__bar" style="--primary-clr:#777bb4;--secondary-clr:#cfd0ea;"></div>
-      </div>
-
-      <div class="card card--skill animate" data-animation="slide-in" style="--level:80%;">
-        <div class="card--skill__icon"><i class="fas fa-database" style="color:#00758F;"></i></div>
-        <h3 class="card--skill__heading">MySQL / PostgreSQL</h3>
-        <div class="card--skill__bar" style="--primary-clr:#00b4d8;--secondary-clr:#bdf0ff;"></div>
-      </div>
-
-      <div class="card card--skill animate" data-animation="slide-in" style="--level:70%;">
-        <div class="card--skill__icon"><i class="fab fa-python" style="color:#4B8BBE;"></i></div>
-        <h3 class="card--skill__heading">Python</h3>
-        <div class="card--skill__bar" style="--primary-clr:#4B8BBE;--secondary-clr:#ffe873;"></div>
-      </div>
-
-      <div class="card card--skill animate" data-animation="slide-in" style="--level:65%;">
-        <div class="card--skill__icon"><i class="fas fa-leaf" style="color:#4DB33D;"></i></div>
-        <h3 class="card--skill__heading">MongoDB</h3>
-        <div class="card--skill__bar" style="--primary-clr:#4DB33D;--secondary-clr:#c5f0bd;"></div>
-      </div>
-
-      <div class="card card--skill animate" data-animation="slide-in" style="--level:75%;">
-        <div class="card--skill__icon"><i class="fas fa-code" style="color:#9b59b6;"></i></div>
-        <h3 class="card--skill__heading">C++</h3>
-        <div class="card--skill__bar" style="--primary-clr:#9b59b6;--secondary-clr:#e4c8f0;"></div>
-      </div>
-
-      <div class="card card--skill animate" data-animation="slide-in" style="--level:72%;">
-        <div class="card--skill__icon"><i class="fab fa-git-alt" style="color:#F1502F;"></i></div>
-        <h3 class="card--skill__heading">Git / Deployment</h3>
-        <div class="card--skill__bar" style="--primary-clr:#F1502F;--secondary-clr:#ffcfc4;"></div>
-      </div>
-    </div>
+<div class="card card--skill animate" data-animation="slide-in" style="--level:70%;">
+  <div class="card--skill__icon">
+    <i class="fab fa-js" style="color: #f0db4f;"></i>
   </div>
-</section>
+  <h3 class="card--skill__heading">JavaScript</h3>
+  <div class="card--skill__bar" style="background-color: #f0db4f;"></div>
+</div>
+
+<div class="card card--skill animate" data-animation="slide-in" style="--level:50%;">
+  <div class="card--skill__icon">
+    <i class="fab fa-python" style="color: #366994;"></i>
+  </div>
+  <h3 class="card--skill__heading">Python</h3>
+  <div class="card--skill__bar" style="background-color: #52ffc5;"></div>
+</div>
+
+<div class="card card--skill animate" data-animation="slide-in" style="--level:70%;">
+  <div class="card--skill__icon">
+    <i class="fab fa-php" style="color: #777bb4;"></i>
+  </div>
+  <h3 class="card--skill__heading">PHP</h3>
+  <div class="card--skill__bar" style="background-color: #69ff52;"></div>
+</div>
+
+<div class="card card--skill animate" data-animation="slide-in" style="--level:80%;">
+  <div class="card--skill__icon">
+    <i class="fas fa-database" style="color: #366994;"></i>
+  </div>
+  <h3 class="card--skill__heading">MySQL</h3>
+  <div class="card--skill__bar" style="background-color: #fc52ff;"></div>
+</div>
+
+<div class="card card--skill animate" data-animation="slide-in" style="--level:80%;">
+  <div class="card--skill__icon">
+    <i class="fas fa-code" style="color: #366994;"></i>
+  </div>
+  <h3 class="card--skill__heading">C++</h3>
+  <div class="card--skill__bar" style="background-color: #7252ff;"></div>
+</div>
+
+<!-- ✨ New Skills -->
+
+<div class="card card--skill animate" data-animation="slide-in" style="--level:75%;">
+  <div class="card--skill__icon">
+    <i class="fab fa-react" style="color: #61DBFB;"></i>
+  </div>
+  <h3 class="card--skill__heading">React</h3>
+  <div class="card--skill__bar" style="background-color: #61DBFB;"></div>
+</div>
+
+<div class="card card--skill animate" data-animation="slide-in" style="--level:60%;">
+  <div class="card--skill__icon">
+    <i class="fas fa-layer-group" style="color: #000000;"></i>
+  </div>
+  <h3 class="card--skill__heading">Next.js</h3>
+  <div class="card--skill__bar" style="background-color: #000000;"></div>
+</div>
+
+<div class="card card--skill animate" data-animation="slide-in" style="--level:65%;">
+  <div class="card--skill__icon">
+    <i class="fas fa-leaf" style="color: #4DB33D;"></i>
+  </div>
+  <h3 class="card--skill__heading">MongoDB</h3>
+  <div class="card--skill__bar" style="background-color: #4DB33D;"></div>
+</div>
+
+<div class="card card--skill animate" data-animation="slide-in" style="--level:60%;">
+  <div class="card--skill__icon">
+    <i class="fas fa-database" style="color: #003B57;"></i>
+  </div>
+  <h3 class="card--skill__heading">SQLite</h3>
+  <div class="card--skill__bar" style="background-color: #89CFF0;"></div>
+</div>
+
+<div class="card card--skill animate" data-animation="slide-in" style="--level:82%;">
+  <div class="card--skill__icon">
+    <i class="fab fa-shopify" style="color: #95BF47;"></i>
+  </div>
+  <h3 class="card--skill__heading">Shopify</h3>
+  <div class="card--skill__bar" style="background-color: #95BF47;"></div>
+</div>
+
+<div class="card card--skill animate" data-animation="slide-in" style="--level:85%;">
+  <div class="card--skill__icon">
+    <i class="fab fa-wordpress" style="color: #21759B;"></i>
+  </div>
+  <h3 class="card--skill__heading">WordPress</h3>
+  <div class="card--skill__bar" style="background-color: #21759B;"></div>
+</div>
+
+<div class="card card--skill animate" data-animation="slide-in" style="--level:75%;">
+  <div class="card--skill__icon">
+    <i class="fas fa-code-branch" style="color: #9b59b6;"></i>
+  </div>
+  <h3 class="card--skill__heading">PHP + MySQL</h3>
+  <div class="card--skill__bar" style="background-color: #d97bff;"></div>
+</div>
+
+
+  </div>
+</div>
+</div>
 
 <!-- Projects -->
-<section id="projects" class="screen">
+<div id="projects" class="screen coral-reef-bg">
   <div class="content-section">
     <div class="screen__content grid grid--projects">
       <h2 class="heading grid__heading screen__heading" data-heading="03">Projects</h2>
-      <p class="section-intro">
-        A selection of live work across four stacks — custom web apps, Shopify storefronts,
-        bespoke WordPress builds, and business software. Every card links to the live site or the source.
-      </p>
 
-      <div class="project-categories" role="tablist">
-        <button class="category-btn active" data-category="websites" role="tab" aria-selected="true" aria-controls="websites-container">
-          Web Apps <span class="count">18</span>
-        </button>
-        <button class="category-btn" data-category="shopify" role="tab" aria-selected="false" aria-controls="shopify-container">
-          Shopify <span class="count">7</span>
-        </button>
-        <button class="category-btn" data-category="wordpress" role="tab" aria-selected="false" aria-controls="wordpress-container">
-          WordPress <span class="count">7</span>
-        </button>
-        <button class="category-btn" data-category="software" role="tab" aria-selected="false" aria-controls="software-container">
-          Software <span class="count">8</span>
-        </button>
+      <!-- Category Tabs -->
+      <div class="project-categories">
+        <button class="category-btn active" data-category="websites">Websites</button>
+        <button class="category-btn" data-category="shopify">Shopify</button>
+        <button class="category-btn" data-category="wordpress">WordPress</button>
+        <button class="category-btn" data-category="software">Software</button>
       </div>
 
-      <!-- ============================ WEB APPS ============================ -->
-      <div class="project-category-container active" id="websites-container" role="tabpanel">
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://medi-sync-ebon-theta.vercel.app/">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/MediSync.png" alt="MediSync hospital management system" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">MediSync — Hospital Management</h3>
-            <p class="pcard__desc">Role-based HMS covering records, appointments, pharmacy, labs, wards and billing. 13 roles and 57 permissions enforced server-side on every request.</p>
-            <div class="pcard__tags"><span>Next.js</span><span>TypeScript</span><span>RBAC</span></div>
-            <span class="pcard__cta">Open the demo <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://sitelens-9v89.onrender.com/">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/SiteLens.png" alt="SiteLens website audit tool" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">SiteLens — Website Audit Engine</h3>
-            <p class="pcard__desc">Crawls any site, fingerprints its tech stack, then audits SEO, performance, accessibility, security and Shopify setup — and writes the agency report for you.</p>
-            <div class="pcard__tags"><span>Next.js</span><span>TypeScript</span><span>Node</span><span>AI</span></div>
-            <span class="pcard__cta">Run an audit <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://shopstack-rouge.vercel.app">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/ShopStack.png" alt="ShopStack multi-store ecommerce CMS" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">ShopStack — Multi-store CMS</h3>
-            <p class="pcard__desc">A modular, multi-tenant ecommerce CMS. Foundation and authentication modules are live, with a theme engine in progress.</p>
-            <div class="pcard__tags"><span>Next.js</span><span>Prisma</span><span>PostgreSQL</span></div>
-            <span class="pcard__cta">View project <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://cafe-man-pro.vercel.app">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/CafeManPro.png" alt="CafeMan Pro cafe management" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">CafeMan Pro</h3>
-            <p class="pcard__desc">A modern café and restaurant management platform — orders, menu, tables and billing, rebuilt on a Next.js stack.</p>
-            <div class="pcard__tags"><span>Next.js</span><span>TypeScript</span></div>
-            <span class="pcard__cta">View project <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://canvas-folio.vercel.app">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/CanvasFolio.png" alt="CanvasFolio photography studio site" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">CanvasFolio</h3>
-            <p class="pcard__desc">A portfolio platform for photography and film studios, with an admin dashboard and Supabase-backed content management.</p>
-            <div class="pcard__tags"><span>Next.js</span><span>TypeScript</span><span>Supabase</span></div>
-            <span class="pcard__cta">View project <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://foliora-one.vercel.app">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/Foliora.png" alt="Foliora resume to portfolio generator" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">Foliora</h3>
-            <p class="pcard__desc">Turns a resume into a deployable portfolio site in about two minutes, with AI-generated imagery and one-click export.</p>
-            <div class="pcard__tags"><span>JavaScript</span><span>Next.js</span><span>AI</span></div>
-            <span class="pcard__cta">Try it <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://techassistantbysiddhant.vercel.app/">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/TechAssistantNew.png" alt="TechAssistant website" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">TechAssistant</h3>
-            <p class="pcard__desc">A services site for an IT support and repair business, built for fast load and clear conversion paths.</p>
-            <div class="pcard__tags"><span>React</span><span>Next.js</span><span>TypeScript</span></div>
-            <span class="pcard__cta">Visit site <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://ivory-heron-151686.hostingersite.com/index.php">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/CloudBlitz.png" alt="CloudBlitz learning platform" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">CloudBlitz Learning Platform</h3>
-            <p class="pcard__desc">A course and enquiry platform for a training institute, with a full PHP admin back office behind it.</p>
-            <div class="pcard__tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span></div>
-            <span class="pcard__cta">Visit site <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://14knowledgelabs.vercel.app">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/KnowledgeLabs14.png" alt="14 Knowledge Labs landing page" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">14 Knowledge Labs</h3>
-            <p class="pcard__desc">A conversion-focused landing page for a sports careers programme.</p>
-            <div class="pcard__tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-            <span class="pcard__cta">Visit site <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://soni-mens-wear.vercel.app/">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/SoniMensWear.png" alt="Soni Mens Wear website" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">Soni Men's Wear</h3>
-            <p class="pcard__desc">A storefront and brand site for a menswear retailer in Deoria.</p>
-            <div class="pcard__tags"><span>React</span><span>Next.js</span><span>TypeScript</span></div>
-            <span class="pcard__cta">Visit site <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://rssacademy.vercel.app/">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/RSSAcademy.png" alt="RSS Academy landing page" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">RSS Academy</h3>
-            <p class="pcard__desc">Landing page and admissions funnel for a coaching academy.</p>
-            <div class="pcard__tags"><span>React</span><span>Next.js</span><span>TypeScript</span></div>
-            <span class="pcard__cta">Visit site <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://anttravels.vercel.app/">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/ANTTravels.png" alt="ANT Travels website" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">ANT Travels</h3>
-            <p class="pcard__desc">Booking and enquiry site for a Noida-based bus and travel service.</p>
-            <div class="pcard__tags"><span>React</span><span>Next.js</span><span>TypeScript</span></div>
-            <span class="pcard__cta">Visit site <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://shreeramlibrary.vercel.app/">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/ShreeRamLibrary.png" alt="Shreeram Library website" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">Shreeram Library</h3>
-            <p class="pcard__desc">A digital library site with seat booking and membership information for a local study hall.</p>
-            <div class="pcard__tags"><span>React</span><span>Next.js</span><span>TypeScript</span></div>
-            <span class="pcard__cta">Visit site <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://bespoke-cannoli-02245c.netlify.app/">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/Project-4.png" alt="Webtechdoor website" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">Webtechdoor</h3>
-            <p class="pcard__desc">A full stack agency site with a Node back end and MongoDB-driven content.</p>
-            <div class="pcard__tags"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
-            <span class="pcard__cta">Visit site <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://resize-pic-chrome-extension.vercel.app/">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/image-resizer.png" alt="Resize-Pic image resizer" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">Resize-Pic</h3>
-            <p class="pcard__desc">A browser-based image resizer that does all processing client side — nothing is uploaded.</p>
-            <div class="pcard__tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-            <span class="pcard__cta">Try it <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://day-night-transition-khaki.vercel.app/">
-          <div class="pcard__media">
-            <img src="images/day-night-transition.png" alt="Day night transition animation" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">Dynamic Day / Night Cycle</h3>
-            <p class="pcard__desc">A pure CSS and JavaScript scene that animates a full day-to-night transition.</p>
-            <div class="pcard__tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-            <span class="pcard__cta">View demo <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://shooting-game-seven.vercel.app/">
-          <div class="pcard__media">
-            <img src="images/shooting.png" alt="Browser shooting game" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">Shooting Game</h3>
-            <p class="pcard__desc">A browser arcade game with collision detection, scoring and increasing difficulty.</p>
-            <div class="pcard__tags"><span>React</span><span>JavaScript</span></div>
-            <span class="pcard__cta">Play it <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://siddhant7701.github.io/Portfolio-Sid/">
-          <div class="pcard__media">
-            <img src="images/my-portfolio.png" alt="This portfolio site" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">This Portfolio</h3>
-            <p class="pcard__desc">Hand-built in vanilla HTML, CSS and JavaScript — no framework, no build step.</p>
-            <div class="pcard__tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-            <span class="pcard__cta">You're here <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
+      <!-- Websites Section -->
+      <div class="project-category-container active" id="websites-container">
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://medi-sync-ebon-theta.vercel.app/">
+            <img class="card__img" src="images/MediSync.png">
+            <h2 class="heading card__heading">MediSync - Hospital Management</h2>
+            <div class="tech-stack">
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span>RBAC</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://sitelens-9v89.onrender.com/">
+            <img class="card__img" src="images/SiteLens.png">
+            <h2 class="heading card__heading">SiteLens - Website Audit Engine</h2>
+            <div class="tech-stack">
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span>Node.js</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://shopstack-rouge.vercel.app">
+            <img class="card__img" src="images/ShopStack.png">
+            <h2 class="heading card__heading">ShopStack - Multi-store CMS</h2>
+            <div class="tech-stack">
+              <span>Next.js</span>
+              <span>Prisma</span>
+              <span>PostgreSQL</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://cafe-man-pro.vercel.app">
+            <img class="card__img" src="images/CafeManPro.png">
+            <h2 class="heading card__heading">CafeMan Pro</h2>
+            <div class="tech-stack">
+              <span>Next.js</span>
+              <span>TypeScript</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://canvas-folio.vercel.app">
+            <img class="card__img" src="images/CanvasFolio.png">
+            <h2 class="heading card__heading">CanvasFolio</h2>
+            <div class="tech-stack">
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span>Supabase</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://foliora-one.vercel.app">
+            <img class="card__img" src="images/Foliora.png">
+            <h2 class="heading card__heading">Foliora - Resume to Portfolio</h2>
+            <div class="tech-stack">
+              <span>Next.js</span>
+              <span>JavaScript</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://techassistantbysiddhant.vercel.app/">
+            <img class="card__img" src="images/TechAssistantNew.png">
+            <h2 class="heading card__heading">TechAssistant</h2>
+            <div class="tech-stack">
+              <span>React.js</span>
+              <span>Next.js</span>
+              <span>TypeScript</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://ivory-heron-151686.hostingersite.com/index.php">
+            <img class="card__img" src="images/CloudBlitz.png">
+            <h2 class="heading card__heading">CloudBlitz Learning Platform</h2>
+            <div class="tech-stack">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>JavaScript</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://14knowledgelabs.vercel.app">
+            <img class="card__img" src="images/KnowledgeLabs14.png">
+            <h2 class="heading card__heading">14 Knowledge Labs</h2>
+            <div class="tech-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://resize-pic-chrome-extension.vercel.app/">
+            <img class="card__img" src="images/image-resizer.png">
+            <h2 class="heading card__heading">Resize-Pic Extension</h2>
+            <div class="tech-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://bespoke-cannoli-02245c.netlify.app/">
+            <img class="card__img" src="images/Project-4.png">
+            <h2 class="heading card__heading">Webtechdoor</h2>
+            <div class="tech-stack">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://day-night-transition-khaki.vercel.app/">
+            <img class="card__img" src="images/day-night-transition.png">
+            <h2 class="heading card__heading">Day-Night Transition</h2>
+            <div class="tech-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://siddhant7701.github.io/Portfolio-Sid/">
+            <img class="card__img" src="images/my-portfolio.png">
+            <h2 class="heading card__heading">My Portfolio</h2>
+            <div class="tech-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://soni-mens-wear.vercel.app/">
+            <img class="card__img" src="images/SoniMensWear.png">
+            <h2 class="heading card__heading">Soni Mens Wear</h2>
+            <div class="tech-stack">
+              <span>React.js</span>
+              <span>Next.js</span>
+              <span>TypeScript</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://rssacademy.vercel.app/">
+            <img class="card__img" src="images/RSSAcademy.png">
+            <h2 class="heading card__heading">RSS Academy Landing Page</h2>
+            <div class="tech-stack">
+              <span>React.js</span>
+              <span>Next.js</span>
+              <span>TypeScript</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://anttravels.vercel.app/">
+            <img class="card__img" src="images/ANTTravels.png">
+            <h2 class="heading card__heading">Landing Page Bus Service</h2>
+            <div class="tech-stack">
+              <span>React.js</span>
+              <span>Next.js</span>
+              <span>TypeScript</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://shreeramlibrary.vercel.app/">
+            <img class="card__img" src="images/ShreeRamLibrary.png">
+            <h2 class="heading card__heading">Library Website</h2>
+            <div class="tech-stack">
+              <span>React.js</span>
+              <span>Next.js</span>
+              <span>TypeScript</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://shooting-game-seven.vercel.app/">
+            <img class="card__img" src="images/shooting.png">
+            <h2 class="heading card__heading">Shooting Game</h2>
+            <div class="tech-stack">
+              <span>React.js</span>
+              <span>JavaScript</span>
+            </div>
+          </a>
+        </div>
       </div>
 
-      <!-- ============================ SHOPIFY ============================ -->
-      <div class="project-category-container" id="shopify-container" role="tabpanel">
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://professorwhytes.com/">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/ProfessorWhytes.png" alt="Professor Whyte's Shopify store" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">Professor Whyte's</h3>
-            <p class="pcard__desc">A full Shopify storefront with bundles, a rewards programme, effect-based collection filtering and promotional campaign sections.</p>
-            <div class="pcard__tags"><span>Shopify</span><span>Liquid</span><span>CRO</span></div>
-            <span class="pcard__cta">Visit store <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://kratomade.com/">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/Kratomade.png" alt="Kratomade Shopify store" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">Kratomade</h3>
-            <p class="pcard__desc">Beverage brand storefront with subscribe-and-save, a loyalty rewards widget, wholesale portal and a content hub.</p>
-            <div class="pcard__tags"><span>Shopify</span><span>Liquid</span><span>Subscriptions</span></div>
-            <span class="pcard__cta">Visit store <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://www.drink-vibes.com/">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/DrinkVibes.png" alt="VIBES Beverages Shopify store" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">VIBES Beverages</h3>
-            <p class="pcard__desc">Functional social tonics brand — bold custom theme work, a members club section and age-gated entry.</p>
-            <div class="pcard__tags"><span>Shopify</span><span>Liquid</span><span>Custom Theme</span></div>
-            <span class="pcard__cta">Visit store <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://teatimedrinks.com/">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/TeaTimeDrinks.png" alt="Tea Time Drinks Shopify store" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">Tea Time</h3>
-            <p class="pcard__desc">Seltzer and merch storefront with an animated hero carousel, rewards integration and a 21+ age gate.</p>
-            <div class="pcard__tags"><span>Shopify</span><span>Liquid</span><span>Merch</span></div>
-            <span class="pcard__cta">Visit store <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://glintbeverage.com/">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/GlintBeverage.png" alt="GLINT Beverage Shopify store" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">GLINT Beverage</h3>
-            <p class="pcard__desc">Gut-health drinks storefront with free-shipping thresholds and a conversion-tuned product page.</p>
-            <div class="pcard__tags"><span>Shopify</span><span>Liquid</span><span>CRO</span></div>
-            <span class="pcard__cta">Visit store <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://hotgadget.in/">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/HotGadgets.png" alt="HotGadget Shopify store" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">HotGadget</h3>
-            <p class="pcard__desc">A consumer electronics storefront built and launched on Shopify.</p>
-            <div class="pcard__tags"><span>Shopify</span><span>Liquid</span></div>
-            <span class="pcard__cta">Visit store <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://github.com/siddhant7701/shopify-glowmist-assignment">
-          <div class="pcard__media pcard__media--repo">
-            <span class="pcard__badge pcard__badge--code">Source</span>
-            <i class="fab fa-shopify"></i>
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">GlowMist — Theme Section</h3>
-            <p class="pcard__desc">A custom Liquid product section built as a Shopify theme development assignment. The demo store is password protected, so the source is linked instead.</p>
-            <div class="pcard__tags"><span>Shopify</span><span>Liquid</span><span>Theme Dev</span></div>
-            <span class="pcard__cta">View source <i class="fab fa-github"></i></span>
-          </div>
-        </a>
-
+      <!-- Shopify Section -->
+      <div class="project-category-container" id="shopify-container">
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://professorwhytes.com/">
+            <img class="card__img" src="images/ProfessorWhytes.png">
+            <h2 class="heading card__heading">Professor Whyte's</h2>
+            <div class="tech-stack">
+              <span>Shopify</span>
+              <span>Liquid</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://kratomade.com/">
+            <img class="card__img" src="images/Kratomade.png">
+            <h2 class="heading card__heading">Kratomade</h2>
+            <div class="tech-stack">
+              <span>Shopify</span>
+              <span>Liquid</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://www.drink-vibes.com/">
+            <img class="card__img" src="images/DrinkVibes.png">
+            <h2 class="heading card__heading">VIBES Beverages</h2>
+            <div class="tech-stack">
+              <span>Shopify</span>
+              <span>Liquid</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://teatimedrinks.com/">
+            <img class="card__img" src="images/TeaTimeDrinks.png">
+            <h2 class="heading card__heading">Tea Time</h2>
+            <div class="tech-stack">
+              <span>Shopify</span>
+              <span>Liquid</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://glintbeverage.com/">
+            <img class="card__img" src="images/GlintBeverage.png">
+            <h2 class="heading card__heading">GLINT Beverage</h2>
+            <div class="tech-stack">
+              <span>Shopify</span>
+              <span>Liquid</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://hotgadget.in/">
+            <img class="card__img" src="images/HotGadgets.png">
+            <h2 class="heading card__heading">HotGadgets</h2>
+            <div class="tech-stack">
+              <span>Shopify</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://github.com/siddhant7701/shopify-glowmist-assignment">
+            <h2 class="heading card__heading">GlowMist Theme Section</h2>
+            <div class="tech-stack">
+              <span>Shopify</span>
+              <span>Liquid</span>
+              <span>Theme Dev</span>
+            </div>
+          </a>
+        </div>
       </div>
 
-      <!-- ============================ WORDPRESS ============================ -->
-      <div class="project-category-container" id="wordpress-container" role="tabpanel">
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://emberbeverages.com/">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/EmberBeverages.png" alt="Ember Beverages website" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">Ember Beverages</h3>
-            <p class="pcard__desc">Energy drink brand site with a custom dark theme, animated flavour lineup and full store integration.</p>
-            <div class="pcard__tags"><span>WordPress</span><span>Custom Theme</span><span>WooCommerce</span></div>
-            <span class="pcard__cta">Visit site <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://kava-shots.com/">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/KavaShots.png" alt="Kava Shots website" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">Kava Shots</h3>
-            <p class="pcard__desc">An editorial and education site with a magazine-style layout, category taxonomy and a weekly publishing workflow.</p>
-            <div class="pcard__tags"><span>WordPress</span><span>Custom Theme</span><span>Editorial</span></div>
-            <span class="pcard__cta">Visit site <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://kratom-drinks.com/">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/KratomDrinks.png" alt="Kratom Drinks website" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">Kratom Drinks</h3>
-            <p class="pcard__desc">A long-form field guide built as a custom theme, with chapter navigation and a structured content architecture.</p>
-            <div class="pcard__tags"><span>WordPress</span><span>Custom Theme</span><span>SEO</span></div>
-            <span class="pcard__cta">Visit site <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://thc-drink.com/">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/ThcDrink.png" alt="THC Drink website" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">THC Drink</h3>
-            <p class="pcard__desc">An independent guide site with a clean editorial theme, chapter carousel and stat-driven landing sections.</p>
-            <div class="pcard__tags"><span>WordPress</span><span>Custom Theme</span><span>Content</span></div>
-            <span class="pcard__cta">Visit site <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://kava-drinks.com/">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--live">Live</span>
-            <img src="images/KavaDrinks.png" alt="Kava Drinks website" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">Kava Drinks</h3>
-            <p class="pcard__desc">A resource site pairing brand discovery with safety and research content, on a bespoke WordPress theme.</p>
-            <div class="pcard__tags"><span>WordPress</span><span>Custom Theme</span><span>Content</span></div>
-            <span class="pcard__cta">Visit site <i class="fas fa-arrow-up-right-from-square"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://github.com/siddhant7701/Mit-Therapy---Theme-Wordpress">
-          <div class="pcard__media pcard__media--repo">
-            <span class="pcard__badge pcard__badge--code">Source</span>
-            <i class="fab fa-wordpress"></i>
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">MIT Therapy — WooCommerce Theme</h3>
-            <p class="pcard__desc">A premium WordPress + WooCommerce theme: dynamic product grid, variable products, bundles, AJAX mini cart with free-shipping progress, and an Elementor-editable landing page.</p>
-            <div class="pcard__tags"><span>WordPress</span><span>WooCommerce</span><span>PHP</span></div>
-            <span class="pcard__cta">View source <i class="fab fa-github"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://github.com/siddhant7701/Wordpress-Performace-Optimzer-Plugin">
-          <div class="pcard__media pcard__media--repo">
-            <span class="pcard__badge pcard__badge--code">Source</span>
-            <i class="fas fa-gauge-high"></i>
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">Ultimate Performance Optimizer</h3>
-            <p class="pcard__desc">A WordPress plugin that tunes site performance — asset handling, caching behaviour and cleanup — packaged with translations and an uninstall routine.</p>
-            <div class="pcard__tags"><span>WordPress</span><span>PHP</span><span>Plugin</span></div>
-            <span class="pcard__cta">View source <i class="fab fa-github"></i></span>
-          </div>
-        </a>
-
+      <!-- WordPress Section -->
+      <div class="project-category-container" id="wordpress-container">
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://emberbeverages.com/">
+            <img class="card__img" src="images/EmberBeverages.png">
+            <h2 class="heading card__heading">Ember Beverages</h2>
+            <div class="tech-stack">
+              <span>WordPress</span>
+              <span>Custom Theme</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://kava-shots.com/">
+            <img class="card__img" src="images/KavaShots.png">
+            <h2 class="heading card__heading">Kava Shots</h2>
+            <div class="tech-stack">
+              <span>WordPress</span>
+              <span>Custom Theme</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://kratom-drinks.com/">
+            <img class="card__img" src="images/KratomDrinks.png">
+            <h2 class="heading card__heading">Kratom Drinks</h2>
+            <div class="tech-stack">
+              <span>WordPress</span>
+              <span>Custom Theme</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://thc-drink.com/">
+            <img class="card__img" src="images/ThcDrink.png">
+            <h2 class="heading card__heading">THC Drink</h2>
+            <div class="tech-stack">
+              <span>WordPress</span>
+              <span>Custom Theme</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://kava-drinks.com/">
+            <img class="card__img" src="images/KavaDrinks.png">
+            <h2 class="heading card__heading">Kava Drinks</h2>
+            <div class="tech-stack">
+              <span>WordPress</span>
+              <span>Custom Theme</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://github.com/siddhant7701/Mit-Therapy---Theme-Wordpress">
+            <h2 class="heading card__heading">MIT Therapy - WooCommerce Theme</h2>
+            <div class="tech-stack">
+              <span>WordPress</span>
+              <span>WooCommerce</span>
+              <span>PHP</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://github.com/siddhant7701/Wordpress-Performace-Optimzer-Plugin">
+            <h2 class="heading card__heading">WP Performance Optimizer Plugin</h2>
+            <div class="tech-stack">
+              <span>WordPress</span>
+              <span>PHP</span>
+              <span>Plugin</span>
+            </div>
+          </a>
+        </div>
       </div>
 
-      <!-- ============================ SOFTWARE ============================ -->
-      <div class="project-category-container" id="software-container" role="tabpanel">
-
-        <div class="pcard animate" data-animation="move-up-scale">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--sale">For sale</span>
-            <img src="images/CafeMan.png" alt="CafeMan cafe management system" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">CafeMan — Café / Restaurant Management</h3>
-            <p class="pcard__desc">Order taking, menu management, table service and billing for cafés and restaurants. Live demo available on request.</p>
-            <div class="pcard__tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span></div>
-            <div class="pcard__contact">
-              <a href="mailto:srivastavasiddhant32@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-              <a href="https://wa.me/919198985665" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-              <a href="http://app.bachelorspartyhub.com/" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Demo</a>
+      <!-- Software Section -->
+      <div class="project-category-container" id="software-container">
+        <div class="project">
+          <div class="card card--project software-project animate" data-animation="move-up-scale">
+            <img class="card__img" src="images/CafeMan.png">
+            <h2 class="heading card__heading">CafeMan Cafe/Restraunt Management System</h2>
+            <div class="tech-stack">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="software-info">
+              <p>For Sale</p>
+              <div class="software-contact">
+                <a href="mailto:srivastavasiddhant32@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://wa.me/+91 9198985665"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="pcard animate" data-animation="move-up-scale">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--sale">For sale</span>
-            <img src="images/MediMan.png" alt="MediMan hospital management system" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">MediMan — Hospital Management</h3>
-            <p class="pcard__desc">Patient records, appointments, staff and billing for small clinics and hospitals.</p>
-            <div class="pcard__tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span></div>
-            <div class="pcard__contact">
-              <a href="mailto:srivastavasiddhant32@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-              <a href="https://wa.me/919198985665" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <div class="project">
+          <div class="card card--project software-project animate" data-animation="move-up-scale">
+            <img class="card__img" src="images/MediMan.png">
+            <h2 class="heading card__heading">MediMan - Hospital Management System</h2>
+            <div class="tech-stack">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="software-info">
+              <p>For Sale</p>
+              <div class="software-contact">
+                <a href="mailto:srivastavasiddhant32@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://wa.me/+91 9198985665"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="pcard animate" data-animation="move-up-scale">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--sale">For sale</span>
-            <img src="images/SalesCRM.png" alt="Sales CRM system" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">Sales CRM</h3>
-            <p class="pcard__desc">Lead pipeline, follow-ups and sales reporting for small teams.</p>
-            <div class="pcard__tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span></div>
-            <div class="pcard__contact">
-              <a href="mailto:srivastavasiddhant32@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-              <a href="https://wa.me/919198985665" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <div class="project">
+          <div class="card card--project software-project animate" data-animation="move-up-scale">
+            <img class="card__img" src="images/flask-chat-app.png">
+            <h2 class="heading card__heading">Flask Chat App</h2>
+            <div class="tech-stack">
+              <span>Python</span>
+              <span>Flask</span>
+              <span>SQLite</span>
+            </div>
+            <div class="software-info">
+              <p>For Sale</p>
+              <div class="software-contact">
+                <a href="mailto:srivastavasiddhant32@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://wa.me/+91 9198985665"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="pcard animate" data-animation="move-up-scale">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--sale">For sale</span>
-            <img src="images/InventoryPlus.png" alt="InventoryPlus stock management system" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">InventoryPlus — Stock Management</h3>
-            <p class="pcard__desc">Stock levels, purchase and sales entries, and inventory reporting for retail and wholesale.</p>
-            <div class="pcard__tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span></div>
-            <div class="pcard__contact">
-              <a href="mailto:srivastavasiddhant32@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-              <a href="https://wa.me/919198985665" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <div class="project">
+          <div class="card card--project software-project animate" data-animation="move-up-scale">
+            <img class="card__img" src="images/SalesCRM.png">
+            <h2 class="heading card__heading">Sales CRM- Sales Management System</h2>
+            <div class="tech-stack">
+              <span>JavaScript</span>
+              <span>MYSQL</span>
+              <span>PHP</span>
+            </div>
+            <div class="software-info">
+              <p>For Sale</p>
+              <div class="software-contact">
+                <a href="mailto:srivastavasiddhant32@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://wa.me/+91 9198985665"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="pcard animate" data-animation="move-up-scale">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--sale">For sale</span>
-            <img src="images/flask-chat-app.png" alt="Flask chat application" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">Flask Chat App</h3>
-            <p class="pcard__desc">A real-time chat application with rooms and message persistence.</p>
-            <div class="pcard__tags"><span>Python</span><span>Flask</span><span>SQLite</span></div>
-            <div class="pcard__contact">
-              <a href="mailto:srivastavasiddhant32@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-              <a href="https://wa.me/919198985665" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <div class="project">
+          <div class="card card--project software-project animate" data-animation="move-up-scale">
+            <img class="card__img" src="images/InventoryPlus.png">
+            <h2 class="heading card__heading">InventoryPlus - Stock Management System</h2>
+            <div class="tech-stack">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="software-info">
+              <p>For Sale</p>
+              <div class="software-contact">
+                <a href="mailto:srivastavasiddhant32@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://wa.me/+91 9198985665"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+              </div>
             </div>
           </div>
         </div>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://github.com/siddhant7701/tech-detector-pro">
-          <div class="pcard__media pcard__media--repo">
-            <span class="pcard__badge pcard__badge--code">Source</span>
-            <i class="fas fa-magnifying-glass-chart"></i>
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">Tech Detector Pro</h3>
-            <p class="pcard__desc">A Chrome extension that fingerprints any site — CMS and theme detection for Shopify, WordPress, Webflow and more, plus 60+ frameworks, analytics, payments and hosting signals.</p>
-            <div class="pcard__tags"><span>JavaScript</span><span>Chrome Extension</span></div>
-            <span class="pcard__cta">View source <i class="fab fa-github"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://github.com/siddhant7701/ecom-site">
-          <div class="pcard__media">
-            <span class="pcard__badge pcard__badge--code">Source</span>
-            <img src="images/php-bases-ecom.png" alt="Laravel ecommerce site" loading="lazy">
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">Laravel Ecommerce</h3>
-            <p class="pcard__desc">A full ecommerce application built on Laravel with catalog, cart and order handling.</p>
-            <div class="pcard__tags"><span>Laravel</span><span>PHP</span><span>MySQL</span></div>
-            <span class="pcard__cta">View source <i class="fab fa-github"></i></span>
-          </div>
-        </a>
-
-        <a class="pcard animate" data-animation="move-up-scale" target="_blank" rel="noopener" href="https://github.com/siddhant7701/Avatar-Cam">
-          <div class="pcard__media pcard__media--repo">
-            <span class="pcard__badge pcard__badge--code">Source</span>
-            <i class="fas fa-camera-retro"></i>
-          </div>
-          <div class="pcard__body">
-            <h3 class="pcard__title">Avatar Cam</h3>
-            <p class="pcard__desc">A Python webcam tool that detects faces with Haar cascades and applies a stylised anime filter in real time.</p>
-            <div class="pcard__tags"><span>Python</span><span>OpenCV</span><span>Computer Vision</span></div>
-            <span class="pcard__cta">View source <i class="fab fa-github"></i></span>
-          </div>
-        </a>
-
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://github.com/siddhant7701/tech-detector-pro">
+            <h2 class="heading card__heading">Tech Detector Pro - Chrome Extension</h2>
+            <div class="tech-stack">
+              <span>JavaScript</span>
+              <span>Chrome Extension</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://github.com/siddhant7701/ecom-site">
+            <img class="card__img" src="images/php-bases-ecom.png">
+            <h2 class="heading card__heading">Laravel Ecommerce</h2>
+            <div class="tech-stack">
+              <span>Laravel</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a class="card card--project animate" data-animation="move-up-scale" target="_blank" href="https://github.com/siddhant7701/Avatar-Cam">
+            <h2 class="heading card__heading">Avatar Cam</h2>
+            <div class="tech-stack">
+              <span>Python</span>
+              <span>OpenCV</span>
+            </div>
+          </a>
+        </div>
       </div>
-
+    </div>
+    <div class="bubbles-container">
     </div>
   </div>
-</section>
+</div>
 
-<!-- Contact -->
+<!-- Contact Section -->
 <footer id="contact" class="footer">
   <div class="content-section">
     <h2 class="heading footer__heading--lg" data-heading="04">Contact Me</h2>
-
-    <div class="contact-grid">
-
-      <div class="contact-info animate" data-animation="slide-in">
-        <h3 class="heading footer__heading--md">Let's work together</h3>
-        <p class="contact-info__lead">
-          Available for freelance projects — web apps, Shopify builds, WordPress themes
-          and custom business software. I usually reply within a day.
-        </p>
-
-        <a class="contact-row" href="mailto:srivastavasiddhant32@gmail.com">
-          <i class="fas fa-envelope"></i><span>srivastavasiddhant32@gmail.com</span>
-        </a>
-        <a class="contact-row" href="https://wa.me/919198985665" target="_blank" rel="noopener">
-          <i class="fab fa-whatsapp"></i><span>+91 91989 85665</span>
-        </a>
-        <a class="contact-row" href="https://github.com/siddhant7701" target="_blank" rel="noopener">
-          <i class="fab fa-github"></i><span>github.com/siddhant7701</span>
-        </a>
-        <a class="contact-row" href="https://www.linkedin.com/in/siddhant-srivastava-389212211/" target="_blank" rel="noopener">
-          <i class="fab fa-linkedin"></i><span>linkedin.com/in/siddhant-srivastava</span>
-        </a>
-      </div>
-
-      <div class="contact-card animate" data-animation="slide-in-right">
-        <h3 class="heading footer__heading--md">Send a Message</h3>
-        <p class="contact-card__lead">Tell me what you're building and I'll get back to you.</p>
-
+    <br><br>
+      <div class="contact-info animate" data-animation="slide-in-right">
+        <h1 class="heading footer__heading--md">Send a Message</h1>
         <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="61af30cd-a77a-48ea-a23d-94c1ce905195">
           <input type="hidden" name="subject" value="New message from your portfolio">
           <input type="hidden" name="from_name" value="Portfolio - Sid">
-          <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off">
-
+          <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
           <div class="form-group">
-            <label class="sr-only" for="cf-name" hidden>Your name</label>
-            <input id="cf-name" type="text" name="name" placeholder="Your Name" autocomplete="name" required>
+            <input type="text" name="name" placeholder="Your Name" required>
           </div>
           <div class="form-group">
-            <label class="sr-only" for="cf-email" hidden>Your email</label>
-            <input id="cf-email" type="email" name="email" placeholder="Your Email" autocomplete="email" required>
+            <input type="email" name="email" placeholder="Your Email" required>
           </div>
           <div class="form-group">
-            <label class="sr-only" for="cf-msg" hidden>Your message</label>
-            <textarea id="cf-msg" name="message" placeholder="Your Message" rows="5" required></textarea>
+            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
           </div>
-          <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
-          <p class="form-note">Your message goes straight to my inbox. No newsletter, no spam.</p>
+          <button type="submit" class="submit-btn">Send Message</button>
         </form>
-      </div>
+        </div>
 
+
+      </div>
     </div>
 
     <div id="get-in-touch">
       <div class="social-actions">
-        <a href="https://github.com/siddhant7701" class="social-links icon" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/siddhant-srivastava-389212211/" class="social-links icon" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:srivastavasiddhant32@gmail.com" class="social-links icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://wa.me/919198985665" class="social-links icon" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://github.com/siddhant7701" class="social-links icon">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/siddhant-srivastava-389212211/" class="social-links icon">
+          <i class="fab fa-linkedin"></i>
+        </a>
+          <a href="mailto:srivastavasiddhant32@gmail.com" class="social-links icon">          <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://wa.me/9198985665" class="social-links icon">          <i class="fab fa-whatsapp"></i>
+          </a>
+
       </div>
-      <p class="colophon">© <span id="year">2026</span> Siddhant Srivastava · Built with plain HTML, CSS &amp; JavaScript</p>
     </div>
   </div>
 

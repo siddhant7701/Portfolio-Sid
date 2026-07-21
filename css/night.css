@@ -1,0 +1,179 @@
+/* ==========================================================================
+   night.css — dark mode only.
+   Day mode is the original styles.css, untouched. Everything here is scoped
+   to [data-theme="night"] except the toggle button itself.
+   ========================================================================== */
+
+/* --------------------------------------------------------- toggle button */
+
+.theme-toggle {
+    position: fixed;
+    top: 0;
+    right: 3.25rem;
+    margin: 1rem;
+    z-index: 100;
+    width: 2.25rem;
+    height: 2.25rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: .9rem;
+    color: var(--font-clr);
+    background: rgba(0, 0, 0, .28);
+    border: 1px solid rgba(255, 255, 255, .35);
+    transition: background .3s, transform .3s;
+}
+
+.theme-toggle:hover {
+    background: rgba(0, 0, 0, .45);
+    transform: scale(1.08);
+}
+
+@media screen and (min-width: 576px) {
+    .theme-toggle {
+        right: 4.5rem;
+        margin: 2rem;
+    }
+}
+
+/* ------------------------------------------------------------------ stars */
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 40%;          /* stop at the sea line */
+    z-index: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .8s ease;
+}
+
+[data-theme="night"] .stars { opacity: 1; }
+
+.stars::before,
+.stars::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.stars::before {
+    background-image:
+        radial-gradient(1.7px 1.7px at 6% 22%, #fff, transparent),
+        radial-gradient(1.4px 1.4px at 14% 58%, #dfefff, transparent),
+        radial-gradient(2px 2px at 22% 12%, #fff, transparent),
+        radial-gradient(1.3px 1.3px at 31% 44%, #cfe6ff, transparent),
+        radial-gradient(1.6px 1.6px at 39% 26%, #fff, transparent),
+        radial-gradient(1.2px 1.2px at 47% 66%, #dfefff, transparent),
+        radial-gradient(1.9px 1.9px at 56% 16%, #fff, transparent),
+        radial-gradient(1.3px 1.3px at 64% 52%, #cfe6ff, transparent),
+        radial-gradient(1.7px 1.7px at 73% 30%, #fff, transparent),
+        radial-gradient(1.4px 1.4px at 81% 62%, #dfefff, transparent),
+        radial-gradient(2px 2px at 89% 20%, #fff, transparent),
+        radial-gradient(1.3px 1.3px at 95% 48%, #cfe6ff, transparent);
+    animation: twinkle-a 4.5s ease-in-out infinite alternate;
+}
+
+.stars::after {
+    background-image:
+        radial-gradient(1.2px 1.2px at 10% 40%, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 18% 74%, #eaf4ff, transparent),
+        radial-gradient(1.1px 1.1px at 27% 30%, #fff, transparent),
+        radial-gradient(1.6px 1.6px at 35% 8%, #dfefff, transparent),
+        radial-gradient(1.2px 1.2px at 44% 50%, #fff, transparent),
+        radial-gradient(1.4px 1.4px at 52% 34%, #cfe6ff, transparent),
+        radial-gradient(1.1px 1.1px at 61% 70%, #fff, transparent),
+        radial-gradient(1.7px 1.7px at 69% 10%, #eaf4ff, transparent),
+        radial-gradient(1.2px 1.2px at 78% 42%, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 86% 72%, #dfefff, transparent),
+        radial-gradient(1.1px 1.1px at 93% 34%, #fff, transparent),
+        radial-gradient(1.6px 1.6px at 99% 60%, #cfe6ff, transparent);
+    animation: twinkle-b 6s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle-a { 0% { opacity: .45; } 100% { opacity: 1; } }
+@keyframes twinkle-b { 0% { opacity: 1; }   100% { opacity: .4; } }
+
+/* ------------------------------------------------------------------- moon
+   The same .sun element, re-skinned. Position, size and the sunrise
+   animation are inherited from styles.css, so the moon rises on exactly the
+   same path the sun does. */
+
+[data-theme="night"] .sun {
+    background-color: #f2eee0;
+    background-image: radial-gradient(circle at 34% 30%, #ffffff 0%, #f6f3e4 45%, #ddd8c4 78%, #c2bcaa 100%);
+    box-shadow:
+        0 0 30px rgba(245, 250, 255, .8),
+        0 0 80px rgba(150, 195, 255, .45),
+        inset -8px -6px 18px rgba(105, 110, 135, .28);
+}
+
+/* craters */
+[data-theme="night"] .sun::before,
+[data-theme="night"] .sun::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(140, 142, 160, .3);
+    box-shadow: inset 2px 2px 4px rgba(100, 105, 130, .35);
+}
+
+[data-theme="night"] .sun::before { width: 18px; height: 18px; top: 26%; left: 24%; }
+[data-theme="night"] .sun::after  { width: 11px; height: 11px; top: 58%; left: 57%; }
+
+/* ------------------------------------------------------------ night ocean */
+
+[data-theme="night"] body {
+    background: linear-gradient(to bottom, #012a44, #000a14);
+}
+
+[data-theme="night"] .home-scene {
+    background-color: #071a33;
+    background-image: linear-gradient(to bottom, #030d1f 0%, #071a33 58%, #0b2a4a 100%);
+}
+
+[data-theme="night"] .sea {
+    background-color: #0c1e3b;
+}
+
+/* calmer, darker waves at night */
+[data-theme="night"] .wave {
+    background: rgba(255, 255, 255, .06);
+}
+
+/* about section waves */
+[data-theme="night"] .sea-waves {
+    background: linear-gradient(to bottom, #063c66, #02182c);
+}
+
+/* projects reef */
+[data-theme="night"] .coral-reef-bg {
+    background-image:
+        linear-gradient(rgba(1, 12, 24, .74), rgba(1, 12, 24, .84)),
+        url('../images/4128685.jpg');
+}
+
+[data-theme="night"] .screen {
+    background-color: #05121f;
+}
+
+[data-theme="night"] .home-scene,
+[data-theme="night"] .coral-reef-bg,
+[data-theme="night"] .screen--about {
+    background-color: transparent;
+}
+
+[data-theme="night"] .card {
+    background-color: #101a24;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .stars::before,
+    .stars::after { animation: none; }
+}

@@ -995,6 +995,8 @@ strong {
 }
 .project-categories {
     display: flex;
+    flex-wrap: wrap;
+    row-gap: .75rem;
     justify-content: center;
     margin-bottom: 2rem;
     grid-column: 1 / -1;
